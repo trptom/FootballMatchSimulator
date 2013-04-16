@@ -9,10 +9,10 @@ package cz.tpsoft.footballmatch.data;
  * @author tomas.praslicak
  */
 public class Stadium {
-    public static final int MIN_PITCH_WIDTH = 60;
-    public static final int MAX_PITCH_WIDTH = 110;
+    public static final int MIN_PITCH_WIDTH = 45;
+    public static final int MAX_PITCH_WIDTH = 90;
     public static final int DEFAULT_PITCH_WIDTH = 80;
-    public static final int MIN_PITCH_HEIGHT = 100;
+    public static final int MIN_PITCH_HEIGHT = 90;
     public static final int MAX_PITCH_HEIGHT = 120;
     public static final int DEFAULT_PITCH_HEIGHT = 110;
     

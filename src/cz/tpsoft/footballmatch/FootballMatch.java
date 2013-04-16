@@ -4,6 +4,8 @@
  */
 package cz.tpsoft.footballmatch;
 
+import cz.tpsoft.footballmatch.data.Match;
+import cz.tpsoft.footballmatch.data.Player;
 import cz.tpsoft.footballmatch.data.Stadium;
 import cz.tpsoft.footballmatch.view.Main;
 
@@ -18,8 +20,35 @@ public class FootballMatch {
      */
     public static void main(String[] args) {
         Main main = new Main();
-        Stadium stadium = new Stadium();
-        main.getPitch().setStadium(stadium);
+        Match match = new Match(new Stadium(), new Player[][] {
+            {
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player()
+            },
+            {
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player(),
+                new Player()
+            }
+        });
+        main.getPitch().setMatch(match);
         main.setVisible(true);
     }
 }
