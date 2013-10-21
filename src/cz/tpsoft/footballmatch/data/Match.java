@@ -59,7 +59,7 @@ public class Match {
     public synchronized void updatePlayersCoords() {
         for (MatchPlayer[] teamPlayers : players) {
             for (MatchPlayer player : teamPlayers) {
-                player.setCoords((player.getCoords().getX() + 1) % 50, player.getCoords().getY());
+//                player.setCoords((player.getCoords().getX() + 1) % 50, player.getCoords().getY());
             }
         }
     }

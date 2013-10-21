@@ -105,15 +105,15 @@ public class Pitch extends JPanel implements ComponentListener {
             g.setColor(Color.red);
             players = match.getPlayers(Teams.HOME);
             for (MatchPlayer player : players) {
-                int x = pitchRect.x + (int)(player.getCoords().getX() * resize);
-                int y = pitchRect.y + (int)(player.getCoords().getY() * resize);
+                int x = pitchRect.x + (int)(player.getCoords().x * resize);
+                int y = pitchRect.y + (int)(player.getCoords().y * resize);
                 g.fillRect(x-5, y-5, 10, 10);
             }
             g.setColor(Color.blue);
             players = match.getPlayers(Teams.AWAY);
             for (MatchPlayer player : players) {
-                int x = pitchRect.x + pitchRect.width - (int)(player.getCoords().getX() * resize);
-                int y = pitchRect.y + pitchRect.height - (int)(player.getCoords().getY() * resize);
+                int x = pitchRect.x + pitchRect.width - (int)(player.getCoords().x * resize);
+                int y = pitchRect.y + pitchRect.height - (int)(player.getCoords().y * resize);
                 g.fillRect(x-5, y-5, 10, 10);
             }
         }

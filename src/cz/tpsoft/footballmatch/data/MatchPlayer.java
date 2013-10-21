@@ -5,9 +5,8 @@
 package cz.tpsoft.footballmatch.data;
 
 import cz.tpsoft.footballmatch.enums.Positions;
-import cz.tpsoft.footballmatch.util.Vec2F;
 import java.awt.Point;
-import javax.swing.text.Position;
+import javax.vecmath.Vector2d;
 
 /**
  *
@@ -18,7 +17,7 @@ public class MatchPlayer {
     private Player player;
     private Point prefferedPosition;
     private Positions position;
-    private Vec2F coords = new Vec2F();
+    private Vector2d coords = new Vector2d();
 
     public MatchPlayer(Match parent, Player player, Positions position) {
         this.parent = parent;
@@ -43,17 +42,16 @@ public class MatchPlayer {
         return prefferedPosition;
     }
 
-    public Vec2F getCoords() {
+    public Vector2d getCoords() {
         return coords;
     }
 
-    public void setCoords(Vec2F coords) {
-        setCoords(coords.getX(), coords.getY());
+    public void setCoords(Vector2d coords) {
+        coords.set(coords);
     }
 
     public void setCoords(double x, double y) {
-        coords.setX(x);
-        coords.setY(y);
+        coords.set(x, y);
     }
     
     public final void recountPrefferedPosition() {
